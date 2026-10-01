@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projetos - Elo Solidário</title>
+
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+
+<body>
+
+    <header>
+
+        <img
+            src="../IMAGENS/Logo-Elo-Solidario.png"
+            alt="Logo da Elo Solidário"
+            width="150"
+            height="150"
+        >
+
+        <h1>Elo Solidário.</h1>
+
+        <input
+            type="checkbox"
+            id="menu-toggle"
+            class="menu-toggle"
+        >
+
+        <label
+            for="menu-toggle"
+            class="menu-hamburguer"
+            aria-label="Abrir ou fechar menu de navegação"
+        >
+            ☰
+        </label>
+
+        <nav aria-label="Navegação principal">
+
+            <ul class="menu-principal">
+
+                <li>
+                    <a href="index.html">Início</a>
+                </li>
+
+                <li class="menu-dropdown">
+
+                    <a href="projetos.html">Projetos</a>
+
+                    <ul class="submenu">
+
+                        <li>
+                            <a href="#doacoes">Doações</a>
+                        </li>
+
+                        <li>
+                            <a href="#voluntariado">Voluntariado</a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li>
+                    <a href="cadastro.html">Cadastro</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="introducao-projetos">
+
+            <h2>Nossos Projetos</h2>
+
+            <p>
+                Conheça os projetos da Elo Solidário e saiba como você pode
+                contribuir com nossas ações.
+            </p>
+
+            <div class="alerta alerta-informacao">
+                <strong>Participe!</strong>
+                Nossos projetos estão recebendo doações e novos voluntários.
+            </div>
+
+        </section>
+
+
+        <div class="projetos-container">
+
+            <!-- PROJETO DE DOAÇÕES -->
+
+            <article class="card-projeto" id="doacoes">
+
+                <img
+                    src="../IMAGENS/Projeto-Doacoes.png"
+                    alt="Doações de alimentos, roupas e materiais escolares da Elo Solidário"
+                    width="400"
+                    height="300"
+                >
+
+                <div class="card-conteudo">
+
+                    <div class="badges">
+                        <span class="badge badge-doacao">
+                            Doações
+                        </span>
+
+                        <span class="badge badge-ativo">
+                            Ativo
+                        </span>
+                    </div>
+
+                    <h2>Projeto de Doações</h2>
+
+                    <p>
+                        Arrecadamos alimentos, roupas, materiais escolares
+                        e recursos financeiros para ajudar pessoas e famílias
+                        em situação de vulnerabilidade.
+                    </p>
+
+                    <div class="alerta alerta-sucesso">
+                        <strong>Doações abertas!</strong>
+                        Estamos recebendo contribuições para nossas ações.
+                    </div>
+
+                    <h3>Como você pode ajudar?</h3>
+
+                    <ul>
+                        <li>Doação de alimentos não perecíveis;</li>
+                        <li>Roupas em bom estado;</li>
+                        <li>Materiais escolares;</li>
+                        <li>Contribuições financeiras.</li>
+                    </ul>
+
+                    <p>
+                        Os valores arrecadados são utilizados na compra de
+                        alimentos, roupas, materiais escolares e na manutenção
+                        dos projetos da ONG.
+                    </p>
+
+                    <a
+                        href="#modal-doacoes"
+                        class="botao-projeto"
+                    >
+                        Ver detalhes
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJETO DE VOLUNTARIADO -->
+
+            <article class="card-projeto" id="voluntariado">
+
+                <img
+                    src="../IMAGENS/Projeto-Voluntariado.png"
+                    alt="Voluntários da Elo Solidário participando da organização de doações"
+                    width="400"
+                    height="300"
+                >
+
+                <div class="card-conteudo">
+
+                    <div class="badges">
+
+                        <span class="badge badge-voluntariado">
+                            Voluntariado
+                        </span>
+
+                        <span class="badge badge-ativo">
+                            Vagas abertas
+                        </span>
+
+                    </div>
+
+                    <h2>Projeto de Voluntariado</h2>
+
+                    <p>
+                        Ser voluntário é dedicar parte do seu tempo para
+                        colaborar com as ações da Elo Solidário e ajudar
+                        nossos projetos a alcançarem mais pessoas.
+                    </p>
+
+                    <div class="alerta alerta-informacao">
+                        <strong>Quer participar?</strong>
+                        Estamos buscando novos voluntários.
+                    </div>
+
+                    <h3>Atividades dos voluntários</h3>
+
+                    <ul>
+                        <li>Organização e distribuição de doações;</li>
+                        <li>Campanhas de arrecadação;</li>
+                        <li>Apoio em eventos e ações sociais;</li>
+                        <li>Participação em atividades educacionais.</li>
+                    </ul>
+
+                    <a
+                        href="cadastro.html"
+                        class="botao-projeto"
+                    >
+                        Quero ser voluntário
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </main>
+
+
+    <!-- MODAL DE DETALHES -->
+
+    <div
+        id="modal-doacoes"
+        class="modal"
+        role="dialog"
+        aria-labelledby="titulo-modal"
+    >
+
+        <div class="modal-conteudo">
+
+            <a
+                href="#doacoes"
+                class="modal-fechar"
+                aria-label="Fechar"
+            >
+                &times;
+            </a>
+
+            <span class="badge badge-doacao">
+                Doações
+            </span>
+
+            <h2 id="titulo-modal">
+                Como contribuir?
+            </h2>
+
+            <p>
+                Você pode apoiar o projeto doando alimentos não perecíveis,
+                roupas em bom estado, materiais escolares ou contribuindo
+                com as ações realizadas pela Elo Solidário.
+            </p>
+
+            <div class="alerta alerta-sucesso">
+                <strong>Obrigado pelo interesse!</strong>
+                Toda contribuição ajuda nossos projetos a alcançarem
+                mais pessoas.
+            </div>
+
+            <a
+                href="cadastro.html"
+                class="botao-projeto"
+            >
+                Quero participar
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Elo Solidário. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
