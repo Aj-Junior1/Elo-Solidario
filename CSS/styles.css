@@ -94,6 +94,43 @@ p {
 
 
 /* ==================================================
+   ACESSIBILIDADE
+================================================== */
+
+/* Texto disponível para tecnologias assistivas,
+   mas oculto visualmente */
+
+.sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+/* Foco visível para navegação por teclado */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 3px;
+}
+
+
+/* ==================================================
    CABEÇALHO - FLEXBOX
 ================================================== */
 
@@ -377,8 +414,6 @@ form input:focus,
 form textarea:focus {
     border-color: var(--primary-color);
 
-    outline: none;
-
     box-shadow: 0 0 0 3px var(--primary-color-light);
 }
 
@@ -477,8 +512,6 @@ form button:focus {
 
     border-color: var(--secondary-color);
 
-    outline: none;
-
     box-shadow:
         0 0 0 3px var(--primary-color-light),
         0 4px 10px rgba(0, 0, 0, 0.15);
@@ -536,6 +569,11 @@ footer p {
 
     text-align: center;
 }
+
+
+/* ==================================================
+   PROJETOS
+================================================== */
 
 .projetos-container {
     display: grid;
@@ -781,6 +819,25 @@ main .botao-projeto {
     transform: scale(1.1);
 }
 
+
+/* ==================================================
+   REDUÇÃO DE MOVIMENTO
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
 /* ==================================================
    BREAKPOINT 1 - DESKTOP
 ================================================== */
@@ -857,8 +914,8 @@ main .botao-projeto {
     }
 
     .projetos-container {
-    grid-template-columns: 1fr;
-}
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -995,33 +1052,5 @@ main .botao-projeto {
 
     form button {
         align-self: stretch;
-    }
 }
-
-
-/* ==================================================
-   BREAKPOINT 5 - CELULAR PEQUENO
-================================================== */
-
-@media (max-width: 480px) {
-
-    main {
-        padding: var(--espacamento-pequeno);
     }
-
-    section {
-        padding: var(--espacamento-medio);
-    }
-
-    .grid-container {
-        gap: var(--espacamento-pequeno);
-    }
-
-    header h1 {
-        font-size: var(--font-size-medio);
-    }
-
-    h2 {
-        font-size: var(--font-size-medio);
-    }
-}
