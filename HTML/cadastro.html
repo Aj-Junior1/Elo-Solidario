@@ -33,9 +33,9 @@
         <label
             for="menu-toggle"
             class="menu-hamburguer"
-            aria-label="Abrir ou fechar menu de navegação"
         >
-            ☰
+            <span aria-hidden="true">☰</span>
+            <span class="sr-only">Abrir ou fechar menu de navegação</span>
         </label>
 
         <nav aria-label="Navegação principal">
@@ -108,6 +108,7 @@
                         name="nome"
                         placeholder="Digite seu nome completo"
                         minlength="3"
+                        autocomplete="name"
                         required
                     >
 
@@ -120,6 +121,7 @@
                         type="date"
                         id="data"
                         name="data"
+                        autocomplete="bday"
                         required
                     >
 
@@ -136,6 +138,7 @@
                         maxlength="14"
                         pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
                         title="Digite o CPF no formato 000.000.000-00"
+                        inputmode="numeric"
                         required
                     >
 
@@ -149,6 +152,7 @@
                         id="email"
                         name="email"
                         placeholder="exemplo@email.com"
+                        autocomplete="email"
                         required
                     >
 
@@ -165,6 +169,8 @@
                         maxlength="15"
                         pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}"
                         title="Digite o telefone no formato (11) 99999-9999"
+                        autocomplete="tel"
+                        inputmode="tel"
                         required
                     >
 
@@ -186,6 +192,7 @@
                         id="rua"
                         name="rua"
                         placeholder="Digite o nome da rua"
+                        autocomplete="street-address"
                         required
                     >
 
@@ -199,6 +206,7 @@
                         id="numero"
                         name="numero"
                         placeholder="Ex: 123"
+                        inputmode="numeric"
                         required
                     >
 
@@ -225,6 +233,7 @@
                         id="cidade"
                         name="cidade"
                         placeholder="Digite sua cidade"
+                        autocomplete="address-level2"
                         required
                     >
 
@@ -241,6 +250,7 @@
                         maxlength="2"
                         pattern="[A-Za-z]{2}"
                         title="Digite a sigla do estado com duas letras, como SP"
+                        autocomplete="address-level1"
                         required
                     >
 
@@ -257,6 +267,8 @@
                         maxlength="9"
                         pattern="[0-9]{5}-[0-9]{3}"
                         title="Digite o CEP no formato 00000-000"
+                        autocomplete="postal-code"
+                        inputmode="numeric"
                         required
                     >
 
