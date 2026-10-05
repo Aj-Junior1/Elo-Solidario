@@ -61,13 +61,38 @@ A comunicação entre os módulos é realizada utilizando `import` e `export`.
 
 ## Versionamento
 
-O projeto utiliza Git e GitHub para controle de versões.
+O projeto utiliza Git e GitHub para controle de versões e organização do desenvolvimento.
 
 A estratégia de branches segue a estrutura do GitFlow:
 
-- `main`: versão estável do projeto.
-- `develop`: branch utilizada para integração do desenvolvimento.
-- `feature/`: branches destinadas ao desenvolvimento isolado de novas funcionalidades.
+- `main`: mantém as versões estáveis do projeto.
+- `develop`: utilizada para integração das alterações durante o desenvolvimento.
+- `feature/`: utilizada para desenvolver alterações de forma isolada antes da integração com a branch `develop`.
+
+Durante o desenvolvimento, foram utilizados commits semânticos para deixar o histórico mais claro, identificando o tipo e o objetivo de cada alteração.
+
+As alterações de acessibilidade, por exemplo, foram desenvolvidas na branch `feature/acessibilidade` e registradas com o commit:
+
+`fix: melhora acessibilidade da interface`
+
+Após a implementação e os testes, foi aberto um Pull Request da branch `feature/acessibilidade` para a `develop`. Os arquivos modificados foram revisados antes da realização do merge.
+
+O GitHub também foi utilizado para organizar o trabalho através de Issues e Milestones. A Issue #1 registrou as melhorias de acessibilidade e foi vinculada ao milestone `Acessibilidade e qualidade - v1.1.0`.
+
+A primeira versão estável do projeto foi identificada através da tag `v1.0.0`, seguindo o conceito de versionamento semântico.
+
+## Pré-requisitos
+
+Para executar o projeto localmente, é necessário ter:
+
+- Um navegador web moderno, como Google Chrome, Microsoft Edge ou Firefox.
+- Um editor de código, como o Visual Studio Code.
+- Um servidor local para executar a aplicação, como a extensão Live Server do Visual Studio Code.
+- Git, caso o projeto seja obtido por meio da clonagem do repositório.
+
+O projeto foi desenvolvido com HTML5, CSS3 e JavaScript ES6+ e não utiliza um gerenciador de pacotes, como npm. Por esse motivo, não é necessária a instalação de dependências por linha de comando.
+
+A biblioteca SweetAlert2 é carregada diretamente pela aplicação através de CDN.
 
 ## Como executar o projeto
 
@@ -75,6 +100,16 @@ A estratégia de branches segue a estrutura do GitFlow:
 2. Abra a pasta do projeto em um editor de código, como o Visual Studio Code.
 3. Execute o arquivo `HTML/index.html` utilizando um servidor local, como a extensão Live Server.
 4. Utilize o menu de navegação para acessar as funcionalidades da aplicação.
+
+## Build e testes
+
+O projeto utiliza HTML5, CSS3 e JavaScript ES6+ diretamente no navegador, sem ferramentas de compilação ou empacotamento. Por esse motivo, não é necessário executar um comando de build para gerar a aplicação.
+
+Os testes são realizados manualmente durante o desenvolvimento, verificando o funcionamento da navegação, dos formulários, da responsividade e das interações implementadas com JavaScript.
+
+Também são realizadas verificações da estrutura HTML e CSS durante o desenvolvimento para identificar possíveis erros de marcação e estilização.
+
+Atualmente, o projeto não possui uma suíte de testes automatizados.
 
 ## Autor
 
